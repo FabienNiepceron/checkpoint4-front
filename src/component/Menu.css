@@ -1,0 +1,29 @@
+.menu {
+  font-family: cursive;
+}
+.chateau {
+  height: 30rem;
+  width: 100%;
+}
+.menu-title {
+  color: #db5656;
+  position: absolute;
+  font-size: 6rem;
+  left: 33%;
+  top: 22%;
+}
+.menu-ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  font-size: 3rem;
+  margin-top: -4rem;
+  font-weight: bold;
+}
+a:link {
+  text-decoration: none;
+  color: #db5656;
+}
+a:visited {
+  color: #db5656;
+}
