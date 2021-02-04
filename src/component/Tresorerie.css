@@ -1,0 +1,44 @@
+.tresor {
+  font-family: cursive;
+}
+.tresor-title {
+  color: #db5656;
+  font-size: 5rem;
+  text-align: center;
+}
+.tresor {
+  font-size: 3rem;
+}
+.tresor-container {
+  margin-block: 5rem;
+  margin-inline: 10%;
+  border: solid;
+  border-radius: 20px;
+  background-image: url("../image/lingot.jpg");
+  background-size: cover;
+  box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+}
+.tresor-input {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 10rem;
+  align-items: center;
+}
+.tresor-select {
+  font-family: cursive;
+  font-size: 2rem;
+  text-align: center;
+  width: 18rem;
+}
+.tresor.button-add {
+  font-family: cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+#validate {
+  text-align: center;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: -2rem;
+}

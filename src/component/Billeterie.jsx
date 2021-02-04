@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Menu from "./Menu";
 import axios from "axios";
 import "./Billeterie.css";
-import billet from "../image/pexels-pixabay-47047.jpg";
+import billet from "../image/lingot.jpg";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -69,6 +69,7 @@ function Billeterie() {
             />
           </label>
           <div className="billeterie-quantity">
+            <div className="billet-adlt">
             Adulte:
             <input
               type="button"
@@ -82,8 +83,10 @@ function Billeterie() {
               onClickOne={() => setQuantityOne(quantityOne + 1)}
               onClick={() => setCountAdlt(countAdlt + 20)}
             />
-            {quantityOne}
-            {countAdlt}
+            <p>x {quantityOne}</p>
+            <p>{countAdlt} Ecu</p>
+            </div>
+            <div className="billet-chld">
             Enfant:
             <input
               type="button"
@@ -97,11 +100,13 @@ function Billeterie() {
               onClick={() => setQuantityTwo(quantityTwo + 1)}
               onClick={() => setCountChld(countChld + 10)}
             />
-            {quantityTwo}
-            {countChld}
+            <p>x {quantityTwo}</p>
+            <p>{countChld} Ecu</p>
+            </div>
           </div>
+          <div className="billet-total">
           Total : {countAdlt + countChld} Ecu.
-          <div className="billeterie-button">
+          <div className="billet-button">
             <button
               className="form-button"
               type="button"
@@ -109,6 +114,7 @@ function Billeterie() {
             >
               Reserver
             </button>
+            </div>
             <p id="validate"></p>
           </div>
         </div>

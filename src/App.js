@@ -6,7 +6,6 @@ import Login from "./component/Login";
 import Admin from "./component/Admin";
 import Billeterie from "./component/Billeterie";
 import Tresorerie from "./component/Tresorerie";
-import UploadFile from "./component/Upload";
 import "./App.css";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path="/billeterie" component={Billeterie} />
         <Route path="/galerie" component={Galerie} />
         <Route path="/tresorerie" component={Tresorerie} />
-        <Route path="/upload" component={UploadFile} />
       </Switch>
     </BrowserRouter>
   );

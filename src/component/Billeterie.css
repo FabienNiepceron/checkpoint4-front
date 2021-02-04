@@ -1,19 +1,23 @@
 .billeterie {
   font-family: cursive;
+  background-color: #f8f8db;
 }
 .billeterie-title {
   color: #db5656;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
 }
 .billeterie-global {
+  background-image: url("../image/monnaie.jpg");
+  background-size: cover;
   border: solid;
   display: flex;
   justify-content: space-between;
-  height: 10rem;
+  height: 30rem;
   margin-inline: 2rem;
   border-radius: 20px;
   padding: 3rem;
+  margin-bottom: 10rem;
 }
 .billeterie-container {
   width: 50%;
@@ -26,8 +30,38 @@
 }
 .billeterie-text {
   width: 80%;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .billeterie-form {
+  border: solid;
+  border-radius: 20px;
+  padding: 3rem;
   width: 50%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.billeterie-name {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.input-name {
+  width: 30rem;
+  margin-bottom: 3rem;
+}
+.billeterie-quantity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.billet-total {
+  display: flex;
+  justify-content: center;
+}
+.form-button {
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-family: cursive;
 }

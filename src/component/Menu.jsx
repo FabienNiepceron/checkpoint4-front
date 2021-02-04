@@ -21,7 +21,7 @@ function Menu(props) {
           <Link to="/galerie">Galerie</Link>
         </li>
         <li>
-          <Link to="/login">Administrateur</Link>
+          <Link to="/tresorerie">Administrateur</Link>
         </li>
       </ul>
     </div>

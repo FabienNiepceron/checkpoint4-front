@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
 import axios from "axios";
-import or from "../image/pexels-pixabay-47047.jpg"
+import Upload from "./Upload"
+import GalerieAdmin from "./GalerieAdmin"
+import echec from "../image/pexels-pixabay-260024.jpg"
+import TresorerieAdmin from "./TresorerieAdmin"
+import "./Tresorerie.css"
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -28,31 +32,13 @@ function Tresorerie() {
       });
     }
 
-    // useEffect(() => {
-    //   axios.get(`${API_URL}/tresorerie`).then((res) => {
-    //     setPhoto(res.data);
-    //   });
-    // }, []);
-
   return (
     <div>
-      <Menu title={or}/>
+      <Menu title={echec}/>
       <div className="tresor">
-        <h1 className="tresor-tilte">Trésorerie</h1>
+        <h1 className="tresor-title">Trésorerie</h1>
         <div className="tresor-container">
-          <label htmlFor="type" className="tresor-label-select">
-            <select
-              className="tresor-select"
-              name="type"
-              id="type"
-              value={type}
-              onChange={(event) => setType(event.target.value)}
-            >
-              <option value="guerre">Guerre</option>
-              <option value="impot">Impôt</option>
-              <option value="billeterie">Billeterie</option>
-            </select>
-          </label>
+          <div className="tresor-input" >
           <label html="name" className="tresor-name">
             Nom :
             <input
@@ -63,10 +49,25 @@ function Tresorerie() {
               onChange={(event) => setName(event.target.value)}
             />
           </label>
+          <label htmlFor="type" className="tresor-label-select">
+            <select
+              className="tresor-select"
+              name="type"
+              id="type"
+              value={type}
+              onChange={(event) => setType(event.target.value)}
+            >
+              <option >----Selection----</option>
+              <option value="guerre">Guerre</option>
+              <option value="impot">Impôt</option>
+              <option value="billeterie">Billeterie</option>
+              <option value="foncier">Immobilier/Parcel</option>
+            </select>
+          </label>
           <label htmlFor="value" className="tresor-value">
             Valeur :
             <input
-              type="number"
+              type="text"
               name="value"
               id="value"
               value={value}
@@ -76,13 +77,18 @@ function Tresorerie() {
           <button type="button" className="tresor-button-add" onClick={onClick}>
             Ajouter
           </button>
+          </div>
+        <p id="validate"></p>
           {/* <button type="button" className="tresor-button-update" onClick={onClick}>Mettre à jour</button> */}
         </div>
-        <p id="validate"></p>
       </div>
+      <TresorerieAdmin />
       <div className="tresor-upload">
-        
+        <Upload />
       </div>
+        <div className="galerie-admin" >
+        <GalerieAdmin />
+        </div>
     </div>
   );
 }
