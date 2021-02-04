@@ -2,15 +2,15 @@
   font-family: cursive;
 }
 .chateau {
-  height: 30rem;
+  height: 40rem;
   width: 100%;
 }
 .menu-title {
   color: #db5656;
   position: absolute;
-  font-size: 6rem;
-  left: 33%;
-  top: 22%;
+  font-size: 8rem;
+  left: 35%;
+  top: 4rem;
 }
 .menu-ul {
   display: flex;

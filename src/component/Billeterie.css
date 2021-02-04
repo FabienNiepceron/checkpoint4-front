@@ -1,0 +1,33 @@
+.billeterie {
+  font-family: cursive;
+}
+.billeterie-title {
+  color: #db5656;
+  font-size: 4rem;
+  text-align: center;
+}
+.billeterie-global {
+  border: solid;
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  margin-inline: 2rem;
+  border-radius: 20px;
+  padding: 3rem;
+}
+.billeterie-container {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-radius: 20px;
+  margin-inline: 3rem;
+}
+.billeterie-text {
+  width: 80%;
+  font-size: 1.5rem;
+}
+.billeterie-form {
+  width: 50%;
+}
