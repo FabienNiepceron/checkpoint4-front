@@ -1,0 +1,18 @@
+.upload-form {
+  background-image: url("../image/lingot.jpg");
+  background-size: cover;
+  font-family: cursive;
+  font-size: 2rem;
+  border: solid;
+  margin-inline: 10%;
+  border-radius: 20px;
+  box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+  margin-bottom: 4rem;
+  height: 8rem;
+}
+.upload-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
