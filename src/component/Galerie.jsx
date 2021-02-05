@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import axios from "axios";
 import "./Galerie.css";
 import galerie from "../image/pexels-ivan-bertolazzi-2681405.jpg";
+import Footer from "./footer";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -33,6 +34,7 @@ function Galerie() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

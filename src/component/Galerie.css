@@ -38,3 +38,13 @@
 .galery-titre {
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 450px) {
+  .galery-h1 {
+    margin-block: 1rem;
+    font-size: 4rem;
+  }
+  .galery-container {
+    width: 60%;
+  }
+}

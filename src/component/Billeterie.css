@@ -2,66 +2,145 @@
   font-family: cursive;
   background-color: #f8f8db;
 }
-.billeterie-title {
-  color: #db5656;
-  font-size: 5rem;
-  text-align: center;
+@media screen and (min-width: 451px) {
+  .billeterie-title {
+    color: #db5656;
+    font-size: 5rem;
+    text-align: center;
+  }
+  .billeterie-global {
+    background-image: url("../image/monnaie.jpg");
+    background-size: cover;
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+    height: 30rem;
+    margin-inline: 2rem;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 10rem;
+  }
+  .billeterie-container {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-radius: 20px;
+    margin-inline: 3rem;
+    background-color: #f8f8db;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+  }
+  .billeterie-text {
+    width: 80%;
+    font-size: 2rem;
+  }
+  .billeterie-form {
+    border: solid;
+    border-radius: 20px;
+    padding: 3rem;
+    width: 50%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 79%;
+    background-color: #f8f8db;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+  }
+  .billeterie-name {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .input-name {
+    width: 30rem;
+    margin-bottom: 3rem;
+  }
+  .billeterie-quantity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .billet-total {
+    display: flex;
+    justify-content: center;
+  }
+  .form-button {
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-family: cursive;
+  }
 }
-.billeterie-global {
-  background-image: url("../image/monnaie.jpg");
-  background-size: cover;
-  border: solid;
-  display: flex;
-  justify-content: space-between;
-  height: 30rem;
-  margin-inline: 2rem;
-  border-radius: 20px;
-  padding: 3rem;
-  margin-bottom: 10rem;
-}
-.billeterie-container {
-  width: 50%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  border: solid;
-  border-radius: 20px;
-  margin-inline: 3rem;
-}
-.billeterie-text {
-  width: 80%;
-  font-size: 2rem;
-}
-.billeterie-form {
-  border: solid;
-  border-radius: 20px;
-  padding: 3rem;
-  width: 50%;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-.billeterie-name {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.input-name {
-  width: 30rem;
-  margin-bottom: 3rem;
-}
-.billeterie-quantity {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.billet-total {
-  display: flex;
-  justify-content: center;
-}
-.form-button {
-  margin-left: 2rem;
-  font-size: 2rem;
-  font-family: cursive;
+@media screen and (max-width: 450px) {
+  .billeterie-title {
+    color: #db5656;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .billeterie-global {
+    flex-direction: column;
+    height: auto;
+    background-image: url("../image/monnaie.jpg");
+    background-size: cover;
+    border: solid;
+    display: flex;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+    border-radius: 20px;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+  }
+  .billeterie-container {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-radius: 20px;
+    margin-inline: 3rem;
+    background-color: #f8f8db;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+    margin-bottom: 2rem;
+  }
+  .billeterie-text {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .billeterie-form {
+    border: solid;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 54%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #f8f8db;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+  }
+  .billeterie-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .input-name {
+    width: 80%;
+  }
+  .billeterie-quantity {
+    display: flex;
+    text-align: center;
+  }
+  .billet-total {
+    text-align: center;
+  }
+  #validate {
+    margin: 0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 }

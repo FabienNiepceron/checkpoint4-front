@@ -2,7 +2,7 @@
   font-family: cursive;
 }
 .chateau {
-  height: 50rem;
+  height: 60rem;
   width: 100%;
 }
 .menu-title {
@@ -10,7 +10,7 @@
   position: absolute;
   font-size: 8rem;
   left: 35%;
-  top: 4rem;
+  top: 10rem;
 }
 .menu-ul {
   display: flex;
@@ -28,6 +28,12 @@ a:visited {
   color: #db5656;
 }
 
+@media screen and (min-width: 450px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .chateau {
     height: 20rem;
@@ -36,8 +42,40 @@ a:visited {
   .menu-title {
     color: #db5656;
     position: absolute;
-    font-size: 2.5rem;
+    font-size: 3rem;
     left: 24%;
     top: 5rem;
+  }
+  .menu-ul {
+    display: none;
+    flex-direction: column;
+    font-size: 2rem;
+    border: solid;
+    width: 45%;
+    z-index: 10;
+    margin-top: 0rem;
+    background-color: white;
+    box-shadow: 3px 3px #db5656, -1em 0 0.4em grey;
+    border-radius: 20px;
+  }
+  .menu-button {
+    height: 3rem;
+    width: 4.5rem;
+    margin-top: 0rem;
+    position: absolute;
+    top: 16rem;
+    left: 1rem;
+    opacity: 0.8;
+    /* background-color: #f8f8db; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .menu-burger {
+    font-family: cursive;
+    font-size: 1rem;
+    color: #db5656;
+    opacity: 1;
+    width: 3rem;
   }
 }
