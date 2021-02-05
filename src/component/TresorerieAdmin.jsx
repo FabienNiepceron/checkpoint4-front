@@ -19,8 +19,8 @@ function TresorerieAdmin() {
       <div className="impot">
         {money.map((tresorie) => (
           <div className="impot-pers" key={tresorie}>
-            <p className="impot-p">{tresorie.name} </p> 
-            <p className="impot-p">{tresorie.type} </p> 
+            <p className="impot-p">{tresorie.name} </p>
+            <p className="impot-p">{tresorie.type} </p>
             <p className="impot-p"> {tresorie.valeur} Ecu</p>
           </div>
         ))}

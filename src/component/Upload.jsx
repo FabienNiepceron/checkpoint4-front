@@ -58,34 +58,34 @@ function UploadFile() {
 
   return (
     <form className="upload-form">
-      <div className="upload-container" >
-      <input
-        type="file"
-        name="file"
-        accept="image/*"
-        onChange={onChangeHandle}
-      />
-      <button type="button" onClick={onClickHandle}>
-        upload
-      </button>
-      <input
-        type=" text"
-        name="name"
-        placeholder="Nom"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-      />
-      <input
-        type=" text"
-        name="title"
-        placeholder="Titre"
-        value={title}
-        onChange={(event) => setTitle(event.target.value)}
-      />
-      <button type="button" onClick={onClick}>
-        Ajouter
-      </button>
-      <p id="validate"></p>
+      <div className="upload-container">
+        <input
+          type="file"
+          name="file"
+          accept="image/*"
+          onChange={onChangeHandle}
+        />
+        <button type="button" onClick={onClickHandle}>
+          upload
+        </button>
+        <input
+          type=" text"
+          name="name"
+          placeholder="Nom"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+        <input
+          type=" text"
+          name="title"
+          placeholder="Titre"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <button type="button" onClick={onClick}>
+          Ajouter
+        </button>
+        <p id="validate"></p>
       </div>
       {/* {filename && <img src={`${API_URL}/images/${filename}`} alt="upload" />} */}
     </form>

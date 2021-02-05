@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import axios from "axios";
 import "./Billeterie.css";
 import billet from "../image/lingot.jpg";
+import Footer from "./footer";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -49,9 +50,8 @@ function Billeterie() {
               aspernatur vel eum voluptas fuga consequuntur dignissimos incidunt
               nemo.lorem Lorem ipsum dolor, sit amet consectetur adipisicing
               elit. Culpa dignissimos incidunt nobis reprehenderit explicabo
-              eveniet tempora laborum. Cupiditate commodi, facilis laudantium
-              tenetur voluptatem suscipit architecto eos, culpa sit sequi
-              accusantium.
+              eveniet tempora laborum. Cupiditate commodi, facilis laudantium .
+              Adulte 20 écu, Enfant (-6ans) 10 écu.
             </p>
           </div>
         </div>
@@ -70,55 +70,66 @@ function Billeterie() {
           </label>
           <div className="billeterie-quantity">
             <div className="billet-adlt">
-            Adulte:
-            <input
-              type="button"
-              value="-"
-              onClickOne={() => setQuantityOne(quantityOne - 1)}
-              onClick={() => setCountAdlt(countAdlt - 20)}
-            />
-            <input
-              type="button"
-              value="+"
-              onClickOne={() => setQuantityOne(quantityOne + 1)}
-              onClick={() => setCountAdlt(countAdlt + 20)}
-            />
-            <p>x {quantityOne}</p>
-            <p>{countAdlt} Ecu</p>
+              Adulte:
+              <input
+                type="button"
+                value="-"
+                min="0"
+                onClick={() => {
+                  setCountAdlt(countAdlt - 20);
+                  setQuantityOne(quantityOne - 1);
+                }}
+              />
+              <input
+                type="button"
+                value="+"
+                min="0"
+                onClick={() => {
+                  setCountAdlt(countAdlt + 20);
+                  setQuantityOne(quantityOne + 1);
+                }}
+              />
+              <p>x {quantityOne}</p>
+              <p>{countAdlt} Ecu</p>
             </div>
             <div className="billet-chld">
-            Enfant:
-            <input
-              type="button"
-              value="-"
-              onClick={() => setQuantityTwo(quantityTwo - 1)}
-              onClick={() => setCountChld(countChld - 10)}
-            />
-            <input
-              type="button"
-              value="+"
-              onClick={() => setQuantityTwo(quantityTwo + 1)}
-              onClick={() => setCountChld(countChld + 10)}
-            />
-            <p>x {quantityTwo}</p>
-            <p>{countChld} Ecu</p>
+              Enfant:
+              <input
+                type="button"
+                value="-"
+                onClick={() => {
+                  setCountChld(countChld - 10);
+                  setQuantityTwo(quantityTwo - 1);
+                }}
+              />
+              <input
+                type="button"
+                value="+"
+                onClick={() => {
+                  setCountChld(countChld + 10);
+                  setQuantityTwo(quantityTwo + 1);
+                }}
+              />
+              <p>x {quantityTwo}</p>
+              <p>{countChld} Ecu</p>
             </div>
           </div>
           <div className="billet-total">
-          Total : {countAdlt + countChld} Ecu.
-          <div className="billet-button">
-            <button
-              className="form-button"
-              type="button"
-              onClick={onClickHandle}
-            >
-              Reserver
-            </button>
+            Total : {countAdlt + countChld} Ecu.
+            <div className="billet-button">
+              <button
+                className="form-button"
+                type="button"
+                onClick={onClickHandle}
+              >
+                Reserver
+              </button>
             </div>
             <p id="validate"></p>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
